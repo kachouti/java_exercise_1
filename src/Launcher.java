@@ -62,6 +62,8 @@ public class Launcher {
     public static void main(String[] args) {
 
         Command cmd =new Fibo();
+               Fibo fib=new Fibo();
+
         System.out.println("Welcome user");
 
        /* ArrayList list=new  ArrayList<>();
@@ -69,11 +71,11 @@ public class Launcher {
         System.out.print( list );*/
 
 
-       try ( Scanne scanne = new Scanner( System.in ) ) {
+    
 
             while( true ) {
-                System.out.print( "Enter a variable: " );
-                String var = scanner.nextLine();
+               
+                String var = cmd.name();
 
                 if ( var.equals( "quit" ) ) {
                     continue;
@@ -84,7 +86,7 @@ public class Launcher {
 
                     System.out.print( "enter a number : " );
                     int n = scanner.nextInt();
-                    System.out.println("hh");
+                    System.out.println(fib.fibonacci(n));
                 }
 
                 else {
@@ -94,6 +96,6 @@ public class Launcher {
             }
 
 
-        }
+        
     }
 }
